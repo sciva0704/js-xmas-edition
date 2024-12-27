@@ -26,7 +26,7 @@ function validarDescripcionRegalo(descripcionRegalo) {
     if (descripcionRegalo.length >= 50) {
         return 'Este campo debe tener menos de 50 caracteres';
     }
-    if (!/^[A-z]+$/i.test(descripcionRegalo)) {
+    if (!/^[a-z]/i.test(descripcionRegalo)) {
         return 'El campo descripción regalo solo acepta números y letras';
     } else {
         return '';
@@ -54,7 +54,11 @@ function validarForm(e){
     const esExito = manejarErrores(errores) === 0;
 
     if (esExito) {
+        $form.className = "oculto";
         document.querySelector('#exito').className = "";
+        setTimeout(() => {
+            window.location.href = 'wishlist.html';
+          }, 5000);
     }
 }
 
