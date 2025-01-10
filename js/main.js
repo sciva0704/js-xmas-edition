@@ -58,7 +58,7 @@ function validarForm(e){
         document.querySelector('#exito').className = "";
         setTimeout(() => {
             window.location.href = 'wishlist.html';
-          }, 5000);
+          }, 2000);
     }
 }
 
